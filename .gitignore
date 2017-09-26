@@ -1,0 +1,8 @@
+.deploy_git/
+node_modules/
+public/
+.idea/
+**/target/
+**/*.iml
+**/.idea/
+**/*idea/
