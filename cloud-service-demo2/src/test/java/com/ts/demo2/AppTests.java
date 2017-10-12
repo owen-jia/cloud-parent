@@ -30,7 +30,7 @@ public class AppTests {
 
     @Test
     public void get() throws Exception {
-        String tmp = testRestTemplate.getForObject("/say",String.class);
+        String tmp = testRestTemplate.getForObject("say/212",String.class);
         Assert.assertNotNull(tmp);
     }
 
@@ -38,7 +38,7 @@ public class AppTests {
     public void post() {
         MultiValueMap multiValueMap = new LinkedMultiValueMap();
         multiValueMap.add("name","Owen Jia");
-        String tmp = testRestTemplate.postForObject("/say2",multiValueMap,String.class);
+        String tmp = testRestTemplate.postForObject("say2",multiValueMap,String.class);
         Assert.assertNotNull(tmp);
     }
 }

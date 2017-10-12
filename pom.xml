@@ -12,6 +12,7 @@
         <module>cloud-service-discover</module>
         <module>cloud-service-demo1</module>
         <module>cloud-service-demo2</module>
+        <module>cloud-service-gateway</module>
     </modules>
 
     <!--<parent>-->
