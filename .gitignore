@@ -12,3 +12,7 @@
 *.bat
 **/jetty
 **/logs
+*.class
+.idea/
+*.jar
+*.war

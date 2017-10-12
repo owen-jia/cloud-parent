@@ -10,17 +10,77 @@
     <version>1.0.0</version>
     <modules>
         <module>cloud-service-discover</module>
+        <module>cloud-service-demo1</module>
+        <module>cloud-service-demo2</module>
     </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.6.RELEASE</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.7</java.version>
+        <spring-cloud-dependencies.version>Dalston.SR4</spring-cloud-dependencies.version>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Brixton.RELEASE</version>
+                <version>${spring-cloud-dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/libs-snapshot-local</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/libs-milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-releases</id>
+            <name>Spring Releases</name>
+            <url>https://repo.spring.io/libs-release-local</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/libs-snapshot-local</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/libs-milestone-local</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 </project>

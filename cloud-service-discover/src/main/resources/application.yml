@@ -1,12 +1,20 @@
+spring:
+  profiles:
+    active: ${ENV:local}
+  application:
+    name: service-discover
+
 server:
-  port: 8090
+  port: 8761
 
 eureka:
   instance:
     hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    fetch-registry: false
+    register-with-eureka: true
+  server:
+    wait-time-in-ms-when-sync-empty: 0
 
