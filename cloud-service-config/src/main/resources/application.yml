@@ -11,13 +11,13 @@ spring:
   cloud:
     config:
       server:
+        # 通过本地文件系统存放配置文件，也支持Git、Svn方式管理
         native:
-          search-locations: classpath:/remote/, file:./, file:./remote/
+          search-locations: classpath:/remote/, file:./, file:./remote/  #指定扫描目录
           add-label-locations: true
           version: 0.1.0
-      name: configServer
   application:
-    name: config-server
+    name: service-config-server
 
 #eureka:
 #  instance:
