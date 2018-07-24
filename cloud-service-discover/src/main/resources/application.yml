@@ -1,3 +1,4 @@
+# 默认local是单服务方式
 spring:
   profiles:
     active: ${ENV:local}
@@ -16,6 +17,7 @@ eureka:
     register-with-eureka: true
   server:
     wait-time-in-ms-when-sync-empty: 0
+# uat&dev是集群配置方式
 ---
 spring:
   profiles: uat

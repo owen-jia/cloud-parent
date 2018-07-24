@@ -2,6 +2,7 @@ package com.ts.demo2.web;
 
 import com.ts.demo2.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,5 +25,16 @@ public class TestController {
     @ResponseBody
     public String sayHello2(@RequestParam("name") String name){
         return "hello "+name+", this is sayHello2 method";
+    }
+
+    @Value("${demo2.name}")
+    String name;
+    @Value("${demo2.age}")
+    Integer age;
+
+    @GetMapping("config")
+    @ResponseBody
+    public String testConfig(){
+        return "He name is " +name + ",Age is " + age;
     }
 }

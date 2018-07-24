@@ -1,0 +1,6 @@
+# uri拦截器配置
+zuul:
+  ignoredServices: '*'
+  routes:
+    service-demo2: /v2/**
+    service-demo1: /v1/**
