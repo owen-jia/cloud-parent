@@ -26,6 +26,8 @@
 
 > 统一网关路由管理器，URI层面分为内外两个path统一由zuul进行分配代理；客户支持自定义安全处理等等逻辑
 
+> Gateway属于微服务架构必须的一环，是集群服务对外的URL入口
+
 ### cloud-service-config
 
 > 采用本地filesystem方式管理配置文件，也支持Git、Svn方式

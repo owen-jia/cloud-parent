@@ -1,10 +1,3 @@
-server:
-  port: 8881
-
-logging:
-  level:
-    org.springframework.cloud: 'DEBUG'
-
 spring:
   profiles:
     active: native,${ENV:local}
@@ -16,6 +9,10 @@ spring:
           search-locations: classpath:/remote/, file:./, file:./remote/  #指定扫描目录
           add-label-locations: true
           version: 0.1.0
+      fail-fast: true #configServer未能正常启动时，允许client抛出异常并等待
+      retry:
+        initial-interval: 1000
+        max-attempts: 6
   application:
     name: service-config-server
 

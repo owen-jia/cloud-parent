@@ -8,6 +8,7 @@ spring:
       discovery:
         enabled: true
         service-id: service-config-server
+#      uri: http://localhost:8881/
 
 server:
   port: 8092

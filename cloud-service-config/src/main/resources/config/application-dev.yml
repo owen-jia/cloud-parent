@@ -1,8 +1,8 @@
 server:
-  port: 8881
+  port: 8882
 
 spring:
-  profiles: local
+  profiles: dev
 
 logging:
   level:

@@ -4,3 +4,12 @@ zuul:
   routes:
     service-demo2: /v2/**
     service-demo1: /v1/**
+    service-config-server: /vv/**
+
+ribbon:
+  eureka:
+    enable: false
+
+service-demo2:
+  ribbon:
+    listOfServers: xxx.xx
