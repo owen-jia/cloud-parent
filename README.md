@@ -20,6 +20,8 @@
 
 ### cloud-service-discover
 
+> 注册中心服务，基于eureka技术spring-boot构建，可以支持单节点部署和多节点的集群部署，一般生产环境推荐集群部署
+
 ### cloud-service-gateway
 
 > 统一网关路由管理器，URI层面分为内外两个path统一由zuul进行分配代理；客户支持自定义安全处理等等逻辑
