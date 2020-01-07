@@ -3,9 +3,9 @@
 > Author: Owen Jia    
   Email:  owen-jia@outlook.com
 
-服务依赖spring cloud 1.5.6.RELEASE(Dalston.SR4)。
-
-项目依赖spring boot & maven搭建，部署运行方式 java -jar xxx.jar。
+### 核心库依赖版本
+- SpringCloud Version = Hoxton.RELEASE
+- SpringBoot Version = 2.2.1.RELEASE
 
 ### 子项目介绍
 
@@ -14,7 +14,6 @@
 - cloud-service-config 配置中心服务
 - cloud-service-demo1 消费者服务
 - cloud-service-demo2 生产者服务
-
 
 ### cloud-service-discover
 
