@@ -3,9 +3,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.ts</groupId>
+    <groupId>com.github.owen-jia</groupId>
     <artifactId>cloud-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
   </parent>
   <groupId>com.ts</groupId>
   <artifactId>cloud-service-config</artifactId>

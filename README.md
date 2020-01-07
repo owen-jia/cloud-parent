@@ -1,4 +1,4 @@
-## Cloud Parent 微服务框架
+## Cloud Parent 1.1.0 微服务基础框架
 
 > Author: Owen Jia    
   Email:  owen-jia@outlook.com
