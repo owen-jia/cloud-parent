@@ -10,11 +10,8 @@
   <groupId>com.ts</groupId>
   <artifactId>cloud-service-config</artifactId>
   <version>1.0.0</version>
-  <name>cloud-service-config</name>
-  <url>http://maven.apache.org</url>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+  <properties>
       <start-class>com.ts.config.ConfigServerApp</start-class>
   </properties>
 
@@ -33,13 +30,4 @@
           <scope>test</scope>
       </dependency>
   </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 </project>
