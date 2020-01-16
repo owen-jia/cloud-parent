@@ -1,0 +1,13 @@
+debug: false
+server:
+  port: 8883
+spring:
+  profiles: local #本地环境
+  cloud:
+    config:
+      server:
+         vault:
+          default-key: application
+logging:
+  level:
+    org.springframework: 'DEBUG'

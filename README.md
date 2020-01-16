@@ -1,17 +1,19 @@
-## Cloud Parent 1.1.0 微服务基础框架
+# Cloud Parent 微服务基础服务模型
 
 > Author: Owen Jia    
   Email:  owen-jia@outlook.com
 
-### 核心库依赖版本
+## 核心库依赖版本
+- CloudParent Version = 1.1.0
 - SpringCloud Version = Hoxton.RELEASE
 - SpringBoot Version = 2.2.1.RELEASE
 
-### 子项目介绍
+## 子项目介绍
 
 - cloud-service-discover 注册中心服务
 - cloud-service-gateway 网关服务
-- cloud-service-config 配置中心服务
+- cloud-service-config 配置中心服务(本地存储方式)
+- cloud-service-config-vault 采用Vault为存储后台的配置中心服务，Vault1.3.1
 - cloud-service-demo1 消费者服务
 - cloud-service-demo2 生产者服务
 
@@ -44,4 +46,4 @@ Gateway属于微服务架构必须的一环，是集群服务对外的URL入口
 
 生产服务测试Demo，对外提供接口
 
-
+## 

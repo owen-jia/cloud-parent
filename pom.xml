@@ -14,6 +14,7 @@
         <module>cloud-service-demo2</module>
         <module>cloud-service-gateway</module>
         <module>cloud-service-config</module>
+        <module>cloud-service-config-vault</module>
     </modules>
 
     <properties>
