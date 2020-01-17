@@ -1,4 +1,4 @@
-package com.github.owenjia.config.controller;
+package com.github.owenjia.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

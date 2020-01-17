@@ -11,8 +11,8 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  */
 @SpringBootApplication
 @EnableConfigServer
-public class VaultConfigServerApp {
+public class ConfigServerVaultApp {
     public static void main( String[] args ) {
-        SpringApplication.run(VaultConfigServerApp.class,args);
+        SpringApplication.run(ConfigServerVaultApp.class,args);
     }
 }

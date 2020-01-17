@@ -1,4 +1,4 @@
-package com.github.owenjia.config;
+package com.github.owenjia;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -12,7 +12,7 @@
   <version>1.0.0</version>
 
   <properties>
-      <start-class>com.ts.config.ConfigServerApp</start-class>
+      <start-class>com.github.owenjia.ConfigServerApp</start-class>
   </properties>
 
   <dependencies>

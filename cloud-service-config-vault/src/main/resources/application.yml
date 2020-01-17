@@ -1,25 +1,15 @@
 spring:
   profiles:
     active: vault,${ENV:local}
-  application:
-    name: service-config-vault
   cloud:
     config:
-      fail-fast: true #configServer未能正常启动时，允许client抛出异常并等待
-      retry:
-        initial-interval: 1000
-        max-attempts: 6
-      server: #基础配置
+      server:
          vault:
           backend: secret
-          default-key: application
+          default-key: application #公共配置属性，所有应用共享
           host: localhost
           port: 8200
           scheme: http
           kv-version: 2
           timeout: 5
           skip-ssl-validation: true
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/ #Authenticating at http://user:password@localhost:8761/eureka

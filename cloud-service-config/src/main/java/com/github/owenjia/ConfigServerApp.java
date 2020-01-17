@@ -1,4 +1,4 @@
-package com.github.owenjia.config;
+package com.github.owenjia;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,7 +10,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @author: Owen Jia
  * @time: 2018/7/23 11:27
  */
-@SpringBootApplication(scanBasePackages = "com.ts.config")
+@SpringBootApplication
 @EnableConfigServer
 @EnableEurekaClient
 public class ConfigServerApp {
