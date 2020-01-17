@@ -11,10 +11,7 @@ spring:
         service-id: service-config-vault
       profile: default
       name: ${spring.application.name}
-#      label: 4
-#      token: s.F8qMMcRze19KpKq7EMW6rNUx #每个应用可以分别设置不同权限的token
-      headers:
-        X-Config-Token: s.F8qMMcRze19KpKq7EMW6rNUx
+      token: s.F8qMMcRze19KpKq7EMW6rNUx #每个应用可以分别设置不同权限的token
 server:
   port: 8091
 eureka:
