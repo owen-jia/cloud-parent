@@ -4,23 +4,27 @@ spring:
     active: ${ENV:local}
   application:
     name: service-discover
+---
+spring:
+  profiles: local #本地环境
+  freemarker:
+    prefer-file-system-access: false
+    template-loader-path: classpath:/templates/ #存在BUG，访问不了对应html文件，待解决
 server:
   port: 8761
 eureka:
   instance:
     hostname: localhost
-    prefer-ip-address: true
   client:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     fetch-registry: false
-    register-with-eureka: true
+    register-with-eureka: false #false为单节点
   server:
     wait-time-in-ms-when-sync-empty: 0
-# uat&dev是集群配置方式
 ---
 spring:
-  profiles: uat
+  profiles: qa #测试环境
 server:
   port: 8763
 eureka:
@@ -36,7 +40,7 @@ eureka:
     wait-time-in-ms-when-sync-empty: 0
 ---
 spring:
-  profiles: dev
+  profiles: dev #开发环境
 server:
   port: 8762
 eureka:
@@ -45,9 +49,8 @@ eureka:
     hostname: localhost
   client:
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:8763/eureka/
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
     fetch-registry: false
     register-with-eureka: true
   server:
     wait-time-in-ms-when-sync-empty: 0
-

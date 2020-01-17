@@ -14,7 +14,7 @@ spring:
         initial-interval: 1000
         max-attempts: 6
   application:
-    name: service-config-server
+    name: service-config
 
 eureka:
   instance:

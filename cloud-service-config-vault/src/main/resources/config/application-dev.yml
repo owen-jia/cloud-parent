@@ -3,7 +3,11 @@ server:
 
 spring:
   profiles: dev #开发环境部署
-
+  cloud:
+    config:
+      server:
+         vault:
+          default-key: application
 logging:
   level:
     org.springframework: 'DEBUG'
