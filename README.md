@@ -38,6 +38,11 @@ Gateway属于微服务架构必须的一环，是集群服务对外的URL入口
 
 统一管理应用服务、基础服务中gateway的配置文件； discover集群服务配置和config服务器配置建议由服务自己管理配置文件（一般部署后很少会修改）；
 
+### cloud-service-config-vault
+
+采用Vault作为后台数据存储，项目目标是连接调试config如何与vault进行数据模型转换，以及大家一个基础的构建服务样本。
+vault中数据采用json格式，通过demo1进行配置参数读取。
+
 ### cloud-service-demo1
 
 消费服务测试Demo，调用demo2提供的接口
@@ -46,4 +51,6 @@ Gateway属于微服务架构必须的一环，是集群服务对外的URL入口
 
 生产服务测试Demo，对外提供接口
 
-## 
+## 技术标准规范
+
+
