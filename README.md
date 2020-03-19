@@ -25,7 +25,7 @@
 
 统一网关路由管理器，URI层面分为内外两个path统一由zuul进行分配代理；客户支持自定义安全处理等等逻辑
 
-Gateway属于微服务架构必须的一环，是集群服务对外的URL入口
+Gateway属于微服务架构必须的一环，是集群服务对外的URL入口。关注核心：统一安全策略、监控统计、流量弹性控制。
 
 ### cloud-service-config
 
@@ -53,4 +53,5 @@ vault中数据采用json格式，通过demo1进行配置参数读取。
 
 ## 技术标准规范
 
+Spring Cloud Doc：[Hoxton.RELEASE](https://cloud.spring.io/spring-cloud-static/Hoxton.RELEASE/reference/html/spring-cloud.html)
 
