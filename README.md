@@ -11,9 +11,10 @@
 ## 子项目介绍
 
 - cloud-service-discover 注册中心服务
+- cloud-service-gateway-zuul 网关服务2，以zuul为例搭建简单路由网关
 - cloud-service-gateway 网关服务
-- cloud-service-config 配置中心服务(本地存储方式)
-- cloud-service-config-vault 采用Vault为存储后台的配置中心服务，Vault1.3.1
+- cloud-service-config 配置中心，采用本地存储方式
+- cloud-service-config-vault 配置中心2，采用Vault为存储后台的配置中心服务，Vault1.3.1
 - cloud-service-demo1 消费者服务
 - cloud-service-demo2 生产者服务
 
@@ -21,11 +22,37 @@
 
 注册中心服务，基于eureka技术spring-boot构建，可以支持单节点部署和多节点的集群部署，一般生产环境推荐集群部署
 
+### cloud-service-gateway-zuul
+
+统一API网关路由组件，URI层面分为内外两个path统一由zuul进行分配代理；客户支持自定义安全处理等等逻辑
+
+它属于微服务架构必须的一环，是集群服务对外的URL入口。关注核心：统一安全策略、监控统计、流量弹性控制。
+
+支持特性：
+- Authentication
+- Insights
+- Stress Testing
+- Canary Testing
+- Dynamic Routing
+- Service Migration
+- Load Shedding
+- Security
+- Static Response handling
+- Active/Active traffic management
+
 ### cloud-service-gateway
 
-统一网关路由管理器，URI层面分为内外两个path统一由zuul进行分配代理；客户支持自定义安全处理等等逻辑
+网关服务，简单高效api路由服务，提供安全可靠、统计监控，弹性处理能力。其本质是官方团队替代zuul的方案，以webflex和creator为基础构建的。
 
-Gateway属于微服务架构必须的一环，是集群服务对外的URL入口。关注核心：统一安全策略、监控统计、流量弹性控制。
+支持特性：
+- Built on Spring Framework 5, Project Reactor and Spring Boot 2.0
+- Able to match routes on any request attribute.
+- Predicates and filters are specific to routes.
+- Hystrix Circuit Breaker integration.
+- Spring Cloud DiscoveryClient integration
+- Easy to write Predicates and Filters
+- Request Rate Limiting
+- Path Rewriting
 
 ### cloud-service-config
 

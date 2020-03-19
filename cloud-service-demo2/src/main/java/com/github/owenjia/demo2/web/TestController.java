@@ -1,6 +1,6 @@
 package com.github.owenjia.demo2.web;
 
-import com.ts.demo2.service.TestService;
+import com.github.owenjia.demo2.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
