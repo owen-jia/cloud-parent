@@ -72,11 +72,11 @@ vault中数据采用json格式，通过demo1进行配置参数读取。
 
 ### cloud-service-demo1
 
-消费服务测试Demo，调用demo2提供的接口
+消费服务测试Demo，调用demo2提供的接口，采用config-vault服务作为配置中心。
 
 ### cloud-service-demo2
 
-生产服务测试Demo，对外提供接口
+生产服务测试Demo，对外提供接口，采用config服务作为配置中心。
 
 ## 技术标准规范
 

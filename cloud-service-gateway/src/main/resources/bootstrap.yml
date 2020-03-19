@@ -10,7 +10,7 @@ spring:
         service-id: service-config-server
 
 server:
-  port: 8093
+  port: 8083
 
 eureka:
   instance:
