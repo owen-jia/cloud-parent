@@ -16,8 +16,9 @@
 - cloud-service-gateway 网关服务
 - cloud-service-config 配置中心，采用本地存储方式
 - cloud-service-config-vault 配置中心2，采用Vault为存储后台的配置中心服务，Vault1.3.1
-- cloud-service-demo1 消费者服务
-- cloud-service-demo2 生产者服务
+- cloud-service-demo-parent 应用父项目
+  - cloud-service-demo1 生产服务样例
+  - cloud-service-demo2 消费服务样例
 
 ### cloud-service-discover
 
@@ -71,13 +72,19 @@
 采用Vault作为后台数据存储，项目目标是连接调试config如何与vault进行数据模型转换，以及大家一个基础的构建服务样本。
 vault中数据采用json格式，通过demo1进行配置参数读取。
 
-### cloud-service-demo1
+### cloud-service-demo-parent 应用服务父项目
 
-消费服务测试Demo，调用demo2提供的接口，采用config-vault服务作为配置中心。
+二级父项目，用来管理应用级的依赖，如jar包版本、平台中间件版本等等，目标是减少应用服务开发配置工作量，同时能在平台级角度上解决问题。
 
-### cloud-service-demo2
+#### cloud-service-demo1
 
-生产服务测试Demo，对外提供接口，采用config服务作为配置中心。
+生产服务测试Demo，调用demo2提供的接口，采用config-vault服务作为配置中心。
+
+#### cloud-service-demo2
+
+消费服务测试Demo，对外提供接口，采用config服务作为配置中心。
+
+样例旨在注册、配置、网关中心模式下完成整个启动配置数据请求链路，通过http方式呈现，这也是主流做法。
 
 ## 技术标准规范
 
