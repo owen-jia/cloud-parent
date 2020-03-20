@@ -7,11 +7,11 @@ spring:
     config:
       discovery:
         enabled: true
-        service-id: service-config-server
+        service-id: service-config
 #      uri: http://localhost:8881/
 
 server:
-  port: 8092
+  port: 8082
 
 eureka:
   instance:

@@ -13,7 +13,7 @@ spring:
       name: ${spring.application.name}
       token: s.F8qMMcRze19KpKq7EMW6rNUx #每个应用可以分别设置不同权限的token
 server:
-  port: 8091
+  port: 8081
 eureka:
   instance:
     hostname: localhost
