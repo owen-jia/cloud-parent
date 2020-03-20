@@ -10,12 +10,11 @@
 
     <modules>
         <module>cloud-service-discover</module>
-        <module>cloud-service-demo1</module>
-        <module>cloud-service-demo2</module>
         <module>cloud-service-gateway</module>
         <module>cloud-service-config</module>
         <module>cloud-service-config-vault</module>
         <module>cloud-service-gateway-zuul</module>
+        <module>cloud-service-demo-parent</module>
     </modules>
 
     <properties>

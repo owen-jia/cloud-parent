@@ -4,6 +4,7 @@
   Email:  owen-jia@outlook.com
 
 ## 核心库依赖版本
+- Java Version = 1.8
 - CloudParent Version = 1.1.0
 - SpringCloud Version = Hoxton.RELEASE
 - SpringBoot Version = 2.2.1.RELEASE
