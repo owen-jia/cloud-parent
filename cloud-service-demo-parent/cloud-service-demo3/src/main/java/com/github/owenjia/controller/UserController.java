@@ -1,6 +1,7 @@
 package com.github.owenjia.controller;
 
-import com.github.owenjia.service.TestService;
+import com.github.owenjia.service.ITestService;
+import com.github.owenjia.service.IUserService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,17 +15,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Autowired(required = false)
-    TestService testService;
+    ITestService iTestService;
+    @Autowired(required = false)
+    IUserService iUserService;
 
     @GetMapping("/user/users")
     public String getUsers(){
-        return "users is success";
+        return "users is success" + iUserService.getUserId("13567890123");
     }
 
     @HystrixCommand(fallbackMethod = "defaultFindUser")
     @GetMapping("/user/find")
     public String getFindUser(){
-        return testService.sayHello("test");
+        return iTestService.sayHello("test");
     }
 
     public String defaultFindUser(){

@@ -17,5 +17,8 @@ eureka:
     hostname: localhost
   client:
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/  #注册中心，单节点方式
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/  #多节点用“,”分隔
 
+turbine:
+  app-config: service-demo3
+  cluster-name-expression: "'default'"
