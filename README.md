@@ -19,6 +19,8 @@
 - cloud-service-demo-parent 应用父项目
   - cloud-service-demo1 生产服务样例
   - cloud-service-demo2 消费服务样例
+  - cloud-service-demo3 hystrix&turbine演示样例
+- cloud-service-hystrix-dashboard 链路熔断监控
 
 ### cloud-service-discover
 
@@ -72,7 +74,7 @@
 采用Vault作为后台数据存储，项目目标是连接调试config如何与vault进行数据模型转换，以及大家一个基础的构建服务样本。
 vault中数据采用json格式，通过demo1进行配置参数读取。
 
-### cloud-service-demo-parent 应用服务父项目
+### cloud-service-demo-parent 所有应用服务的父项目
 
 二级父项目，用来管理应用级的依赖，如jar包版本、平台中间件版本等等，目标是减少应用服务开发配置工作量，同时能在平台级角度上解决问题。
 
@@ -85,6 +87,14 @@ vault中数据采用json格式，通过demo1进行配置参数读取。
 消费服务测试Demo，对外提供接口，采用config服务作为配置中心。
 
 样例旨在注册、配置、网关中心模式下完成整个启动配置数据请求链路，通过http方式呈现，这也是主流做法。
+
+#### cloud-service-demo3
+
+熔断演示Demo，hystrix集成下的单节点和多节点。
+
+### cloud-service-hystrix-dashboard
+
+微服务网络链路熔断监控，支持单节点监控和集群监控，阻止服务网络雪崩必不可少组件
 
 ## 技术标准规范
 
