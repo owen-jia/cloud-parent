@@ -1,16 +1,14 @@
 spring:
   application:
-    name: service-gateway
+    name: service-gateway-zuul
   profiles:
     active: ${ENV:local}
   cloud:
     config:
       discovery:
         enabled: true
-        service-id: service-config-server
-
-server:
-  port: 8083
+        service-id: service-config
+      enabled: true
 
 eureka:
   instance:
@@ -19,3 +17,5 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/  #注册中心，单节点方式
 
+server:
+  port: 8084

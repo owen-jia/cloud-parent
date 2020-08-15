@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: service-hystrix-dashbaord
+  profiles:
+    active: ${ENV:local}
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: service-config
+
+server:
+  port: 8888
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/  #多节点用“,”分隔
+
+turbine:
+  app-config: service-demo3
+  cluster-name-expression: "'default'"
