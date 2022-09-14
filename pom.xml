@@ -28,8 +28,12 @@
 
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
+        <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+        <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>3.1.1</maven-javadoc-plugin.version>
 
         <guava.version>16.0</guava.version>
+        <reversion>2.0.0-SNAPSHOT</reversion>
     </properties>
 
     <dependencyManagement>
@@ -88,8 +92,9 @@
                 <version>${spring-boot.version}</version>
             </plugin>
             <plugin>
-                <!--skip deploy (this is just a test module) -->
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
+                <version>${maven-deploy-plugin.version}</version>
                 <configuration>
                     <skip>true</skip>
                 </configuration>
@@ -109,13 +114,14 @@
             <name>Owen Jia</name>
             <email>owen-jia@outlook.com</email>
             <roles>
-                <role>creater</role>
+                <role>owner</role>
             </roles>
         </developer>
     </developers>
 
     <profiles>
         <profile>
+            <!-- 本地环境 -->
             <id>local</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
@@ -123,6 +129,7 @@
             <properties/>
         </profile>
         <profile>
+            <!--  开发环境  -->
             <id>dev</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
@@ -130,13 +137,15 @@
             <properties/>
         </profile>
         <profile>
-            <id>qa</id>
+            <!--  测试环境  -->
+            <id>test</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties/>
         </profile>
         <profile>
+            <!--  演示环境  -->
             <id>pre</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
@@ -144,6 +153,7 @@
             <properties/>
         </profile>
         <profile>
+            <!--  生产环境  -->
             <id>prod</id>
             <activation>
                 <activeByDefault>false</activeByDefault>

@@ -1,7 +1,9 @@
-# Cloud Parent 微服务基础服务模型
+# 微服务应用基础设施
 
 > Author: Owen Jia    
   Email:  owen-jia@outlook.com
+
+借用cloud-parent工程，可以快速构建完整的微服务应用。
 
 ---
 2.0时代
