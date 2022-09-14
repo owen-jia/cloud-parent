@@ -3,6 +3,14 @@
 > Author: Owen Jia    
   Email:  owen-jia@outlook.com
 
+---
+2.0时代
+- configuration采用nacos
+- spring boot &cloud 版本升级
+- 访问及流量控制采用sentinal方案
+- jdk8 升级 openjdk11
+---
+
 ## 核心库依赖版本
 - Java Version = 1.8
 - CloudParent Version = 1.1.0
