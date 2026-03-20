@@ -19,6 +19,7 @@
 
     <properties>
         <druid.version>1.1.10</druid.version>
+        <guava.version>16.0</guava.version>
     </properties>
 
     <dependencyManagement>
@@ -27,6 +28,11 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
