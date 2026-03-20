@@ -17,9 +17,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
 
-        <spring-cloud-alibaba.version>2021.0.5.0</spring-cloud-alibaba.version>
-        <spring-cloud.version>2021.0.7</spring-cloud.version>
-        <spring-boot.version>2.7.18</spring-boot.version>
+        <spring-cloud-alibaba.version>2021.0.4.0</spring-cloud-alibaba.version>
+        <spring-cloud.version>2021.0.4</spring-cloud.version>
+        <spring-boot.version>2.6.11</spring-boot.version>
 
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
