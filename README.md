@@ -27,6 +27,10 @@
 ## 依赖资源
 
 Nacos 服务端 2.1.0 版本  
+https://github.com/alibaba/nacos/releases/tag/2.1.0
+
 Seata 服务端 1.5.1 版本  
+https://github.com/apache/incubator-seata/releases/tag/v1.5.1
+
 RocketMQ 服务端 4.9.4 版本  
 MySQL 服务端 5.7 版本  
