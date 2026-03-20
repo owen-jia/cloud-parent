@@ -2,7 +2,6 @@ package com.github.owenjia.controller;
 
 import com.github.owenjia.service.ITestService;
 import com.github.owenjia.service.IUserService;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +23,6 @@ public class UserController {
         return "users is success" + iUserService.getUserId("13567890123");
     }
 
-    @HystrixCommand(fallbackMethod = "defaultFindUser")
     @GetMapping("/user/find")
     public String getFindUser(){
         return iTestService.sayHello("test");
