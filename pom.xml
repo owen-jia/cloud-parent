@@ -6,39 +6,37 @@
     <artifactId>cloud-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.1.0</version>
-    <description>tomcat8.0+,jdk8+,maven3.3+,gradle4.4+</description>
 
     <modules>
-        <module>cloud-service-discover</module>
         <module>cloud-service-gateway</module>
-        <module>cloud-service-config</module>
-        <module>cloud-service-config-vault</module>
-        <module>cloud-service-gateway-zuul</module>
         <module>cloud-service-demo-parent</module>
         <module>cloud-service-hystrix-dashboard</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
 
-        <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
-        <spring-boot.version>2.2.1.RELEASE</spring-boot.version>
-        <spring.version>5.2.1.RELEASE</spring.version>
+        <spring-cloud-alibaba.version>2021.0.5.0</spring-cloud-alibaba.version>
+        <spring-cloud.version>2021.0.7</spring-cloud.version>
+        <spring-boot.version>2.7.18</spring-boot.version>
 
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
         <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>3.1.1</maven-javadoc-plugin.version>
-
-        <guava.version>16.0</guava.version>
-        <reversion>2.0.0-SNAPSHOT</reversion>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>{spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -47,7 +45,6 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <!-- Import dependency management from Spring Boot -->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot.version}</version>

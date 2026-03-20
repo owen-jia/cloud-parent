@@ -1,9 +1,0 @@
-server:
-  port: 8881
-
-spring:
-  profiles: local
-
-logging:
-  level:
-    org.springframework.cloud: 'DEBUG'
