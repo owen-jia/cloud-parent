@@ -5,7 +5,7 @@
     <groupId>com.github.owen-jia</groupId>
     <artifactId>cloud-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.1.0</version>
+    <version>2.0.0</version>
 
     <modules>
         <module>cloud-service-gateway</module>
