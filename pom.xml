@@ -10,10 +10,13 @@
     <modules>
         <module>cloud-service-gateway</module>
         <module>cloud-service-demo-parent</module>
+        <module>jia-common</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <java.version>11</java.version>
 
         <spring-cloud-alibaba.version>2021.0.4.0</spring-cloud-alibaba.version>
